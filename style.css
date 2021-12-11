@@ -1,0 +1,296 @@
+* {
+	box-sizing:border-box;
+}
+
+body {
+	background-color: #E8E8E8;
+}
+
+.title{
+	font-size:45px;
+	margin-left: 300px;
+	color:#696A72;
+	text-align: center;
+	border-bottom: 2px solid currentColor;
+}
+
+.menu {
+	margin-left: 300px;
+        text-align: center;
+
+    }
+
+.menu li{
+
+        display:inline-block;
+        text-align: center;
+        width: 20%; /* задаем размер пункта можно в пикселях*/
+    }
+
+.menu a {
+        display: block;
+        padding: 5px 15px;
+        font-size:150%;
+        text-decoration: none;
+        background: #FCC622;
+        margin-right: 5px; /* добавляем отступы между пунктами */
+}
+
+.menu a:hover {
+        background: #8AB8CC;
+    }
+
+
+.title2 a{
+
+	font-size:35px;
+	margin-left: 300px;
+	color:#696A72;
+	text-align: center;
+
+}
+
+.main {
+	margin-bottom: 20px;
+	margin-left: 300px;
+	border: 5px double #FCC622;
+	padding: 6px;
+	float:right;
+	text-align:justify;
+	font-size: 20px; 
+}
+
+.spisok {
+	height: 100%; /* 100% Full-height */	
+	width: 300px; /* 0 ширина - изменить это с помощью JavaScript */
+	position: fixed; /* Оставайтесь на месте */
+	z-index: 1; /* Оставайтесь сверху */
+	top: -15px;
+	left: 0;
+	background-color: #111; /* Фон черный*/
+	overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+}
+
+
+.spisok li, a{
+	padding: 6px 8px 6px 0px;
+	text-decoration: none;
+	font-size: 22px;
+	color: #818181;
+	display: block;
+}
+
+.kartinka {
+	margin-left: 300px; /* То же, что и ширина боковой навигации */
+	padding: 10px 0px;
+	text-align: center;
+}
+
+img.animate1:hover {
+
+    filter: alpha (Opacity=25);/* прозрачность для IE */
+    opacity: 0.45;/* прозрачность для других браузеров */
+
+}
+
+.trans {
+    	transition: 1s; /* Время эффекта */
+	
+   }
+.trans:hover {
+	
+    	transform: scale(1.1); /* Увеличиваем масштаб */
+
+ }
+
+.footer {
+	margin-left: 300px;
+	position: fixed;/* Фиксированное положение */
+	left: 0; bottom: 0; /* Левый нижний угол */
+	padding: 2px; /* Поля вокруг текста */
+	background: #FCC622; /* Цвет фона */
+	width: 100%;
+}
+
+.left {
+	margin-left: 300px;
+	float: left;
+	padding: 0px 20px 20px 0;
+}
+
+table {
+	margin-left: 300px;
+	border: 1px solid grey;
+	width:1550px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+
+	border-spacing: 0;
+	
+}
+/* границы ячеек первого ряда таблицы */
+th {
+   	border: 1px solid grey;
+	background-color: #FCC622;
+}
+
+
+
+/* границы ячеек тела таблицы */
+td {
+   border: 1px solid grey;
+	text-align:justify;
+}
+
+.text {
+	
+	margin-left: 300px;
+	padding: 6px;
+	float:right;
+	text-align:justify;
+	font-size: 20px; 
+}
+
+.slider{
+    max-width: 70%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 40px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+	padding: 0px 0px;
+	text-align: center;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 22px;
+    padding: 20px;
+    color: #FCC622;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+   background-color: #111;
+}
+
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+ 
+#slides{
+	
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide{
+ margin-left: 300px;
+   position: absolute;
+ width: 83%;
+  left: 0px;
+  top: 0px;
+ 
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+  font-size: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+}
+
+.slide:nth-of-type(1){
+  background: red;
+}
+.slide:nth-of-type(2){
+  background: orange;
+}
+.slide:nth-of-type(3){
+  background: green;
+}
+.slide:nth-of-type(4){
+  background: blue;
+}
+.slide:nth-of-type(5){
+  background: purple;
+}
+ 
+
+
+
